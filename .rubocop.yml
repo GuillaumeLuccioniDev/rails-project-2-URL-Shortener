@@ -1,0 +1,14 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  SafeAutoCorrect: true
+
+Style/Documentation:
+  Enabled: false
+
+Rails/I18nLocaleTexts:
+  Enabled: false

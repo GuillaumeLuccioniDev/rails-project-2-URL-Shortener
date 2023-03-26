@@ -1,0 +1,35 @@
+a.no-style,
+a.no-style :focus,
+a.no-style :visited {
+  color: unset;
+  display: unset;
+  font-weight: unset;
+  text-decoration: unset;
+}
+
+article#error_explanation {
+  border: 1px solid var(--color-error);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow) var(--color-shadow);
+  margin: 0.75rem 0;
+  padding: 0.01rem 0.8rem;
+}
+
+.field_with_errors {
+  color: var(--color-error);
+  font-size: larger;
+}
+
+.notice {
+  border: 1px solid var(--color-success);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow) var(--color-shadow);
+  padding: 0.4rem 0.8rem;
+}
+
+.alert {
+  border: 1px solid var(--color-error);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow) var(--color-shadow);
+  padding: 0.4rem 0.8rem;
+}

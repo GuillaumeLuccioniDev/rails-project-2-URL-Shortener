@@ -1,0 +1,7 @@
+<% if @link.persisted?  %>
+  <article>
+    <h1>Short url: <%= link_to @short_url, @short_url %></h1>
+  </article>
+<% else %>
+  <%= render "form", link: @link %>
+<% end %>

@@ -1,0 +1,6 @@
+<%= form_with(model: link) do |f| %>
+  <%= render "layouts/errors", model: link %>
+  <%= f.label :original_url, 'URL' %>
+  <%= f.text_field :original_url, autofocus: true %>
+  <%= f.submit 'Create Short URL' %>
+<% end %>

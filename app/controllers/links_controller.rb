@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'securerandom'
-
 class LinksController < ApplicationController
   def index
     @link = Link.new
@@ -14,11 +12,12 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)
-    @link.short_url_id = SecureRandom.uuid
+    @link.short_url_id = Utils::ShortIdGenerator.generate
 
     if @link.save
       @short_url = "#{request.base_url}/#{@link.short_url_id}"
-      render :index, status: :see_other, notice: 'Short URL has been created'
+      flash.now.notice = 'Short URL has been created'
+      render :index, status: :see_other
     else
       render :index, status: :unprocessable_entity
     end
